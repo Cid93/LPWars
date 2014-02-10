@@ -73,10 +73,12 @@ public class Gc{
 		equipe = Couleur.bleu;
 	}
 
-	public Gc(Couleur theEquipe){
-		pv = 100;
-		pa = 10;
-		pm = 2;
-		equipe = theEquipe;
+	public Boolean estMort(){
+		return true;
+	}
+
+	public void attaque(Gc gcDef){
+		// TODO
+		return;
 	}
 }

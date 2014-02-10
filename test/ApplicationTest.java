@@ -6,6 +6,8 @@ import java.util.Map;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.*;
 
+import static org.junit.Assert.*;
+
 import play.mvc.*;
 import play.test.*;
 import play.data.DynamicForm;
@@ -18,6 +20,8 @@ import play.libs.F.*;
 import static play.test.Helpers.*;
 import static org.fest.assertions.Assertions.*;
 
+import models.*;
+
 
 /**
 *
@@ -27,18 +31,24 @@ import static org.fest.assertions.Assertions.*;
 */
 public class ApplicationTest {
 
-    @Test
-    public void simpleCheck() {
-        int a = 1 + 1;
-        assertThat(a).isEqualTo(2);
+    /**
+     * Test sur une attaque
+     */
+    public void donneAttaque(Gc att, Gc def, Integer pvrestant) {
+
+        att.attaque(def);
+
+        assertThat(def.getPv()).isEqualTo(pvrestant);
+
+        if(pvrestant > 0){
+            assertThat(def.estMort()).isEqualTo(Boolean.FALSE);
+        } else {
+            assertThat(def.estMort()).isEqualTo(Boolean.TRUE);
+        }
     }
 
     @Test
-    public void renderTemplate() {
-        Content html = views.html.index.render("Your new application is ready.");
-        assertThat(contentType(html)).isEqualTo("text/html");
-        assertThat(contentAsString(html)).contains("Your new application is ready.");
+    public void attaque(){
+        donneAttaque(new Gc(), new Gc(), 100);
     }
-
-
 }
