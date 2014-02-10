@@ -50,15 +50,15 @@ public class Gc{
 		return this.equipe;
 	}
 
-	public void setPV(Integer thePv){
+	public void setPv(Integer thePv){
 		this.pv = thePv;
 	}
 
-	public void setPA(Integer thePa){
+	public void setPa(Integer thePa){
 		this.pa = thePa;
 	}
 
-	public void setPM(Integer thePm){
+	public void setPm(Integer thePm){
 		this.pm = thePm;
 	}
 
@@ -74,11 +74,10 @@ public class Gc{
 	}
 
 	public Boolean estMort(){
-		return true;
+		return (pv == 0);
 	}
 
 	public void attaque(Gc gcDef){
-		// TODO
-		return;
+		gcDef.setPv(gcDef.getPv() - this.pa);
 	}
 }
