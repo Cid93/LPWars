@@ -39,6 +39,7 @@ public class ApplicationTest {
         att.attaque(def);
 
         assertThat(def.getPv()).isEqualTo(pvrestant);
+        assertThat(att.getPm()).isEqualTo(0);
 
         if(pvrestant > 0){
             assertThat(def.estMort()).isEqualTo(Boolean.FALSE);
@@ -49,6 +50,6 @@ public class ApplicationTest {
 
     @Test
     public void attaque(){
-        donneAttaque(new Gc(), new Gc(), 100);
+        donneAttaque(new Gc(), new Gc(), 90);
     }
 }

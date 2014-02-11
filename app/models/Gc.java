@@ -74,7 +74,7 @@ public class Gc{
 	}
 
 	public Boolean estMort(){
-		return (pv == 0);
+		return (pv <= 0);
 	}
 
 	public void attaque(Gc gcDef){
