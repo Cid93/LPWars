@@ -53,6 +53,14 @@ public class Gc{
 		return this.equipe;
 	}
 
+	public Integer geti(){
+		return this.i;
+	}
+
+	public Integer getj(){
+		return this.j;
+	}
+
 	public void setPv(Integer thePv){
 		this.pv = thePv;
 	}
@@ -67,6 +75,14 @@ public class Gc{
 
 	public void setEquipe(Couleur theEquipe){
 		this.equipe = theEquipe;
+	}
+
+	public void seti(Integer thei){
+		this.i = thei;
+	}
+
+	public void setj(Integer thej){
+		this.j = thej;
 	}
 
 	public Gc(Couleur theEquipe, Integer thei, Integer thej){

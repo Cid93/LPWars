@@ -119,7 +119,9 @@ public class ApplicationTest {
 
     @Test
     public void attaque(){
-        donneAttaque(infanterieB, infanterieR, 90);
+        donneAttaque(infanterieB, infanterieR, 100);
+        Gc infanterieR2 = new Gc(Gc.Couleur.rouge, 1, 0);
+        donneAttaque(infanterieB, infanterieR2, 90);
     }
 
 }
