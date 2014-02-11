@@ -25,6 +25,9 @@ public class Gc{
 	 */
 	private Integer pm;
 
+	private Integer i;
+	private Integer j;
+
 	/**
 	 * Equipe du GC
 	 */
@@ -66,22 +69,21 @@ public class Gc{
 		this.equipe = theEquipe;
 	}
 
-	public Gc(){
+	public Gc(Couleur theEquipe, Integer thei, Integer thej){
 		pv = 100;
 		pa = 10;
 		pm = 2;
-		equipe = Couleur.bleu;
-	}
-
-	public Gc(Couleur theEquipe){
-		pv = 100;
-		pa = 10;
-		pm = 2;
+		i = thei;
+		j = thej;
 		equipe = theEquipe;
 	}
 
 	public Boolean estMort(){
 		return (pv <= 0);
+	}
+
+	public void mouvement(Case[][] theCarte, Integer thei, Integer thej){
+
 	}
 
 	public void attaque(Gc gcDef){

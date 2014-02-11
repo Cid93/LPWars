@@ -31,6 +31,23 @@ import models.*;
 */
 public class ApplicationTest {
 
+    public Carte carte;
+
+    public Gc infanterieB;
+    public Gc infanterieR;
+
+    public ApplicationTest(){
+        Gc.Couleur [] equipes = {
+            Gc.Couleur.bleu,
+            Gc.Couleur.rouge
+        };
+
+        carte = new Carte(10, equipes);
+
+        infanterieB = new Gc(Gc.Couleur.bleu, 0, 0);
+        infanterieR = new Gc(Gc.Couleur.rouge, 9, 9);
+    }
+
     /**
      * Test sur une attaque
      */
@@ -61,40 +78,44 @@ public class ApplicationTest {
     }
 
     @Test
-    public void attaque(){
-        donneAttaque(new Gc(), new Gc(), 90);
-    }
-
-    @Test
-    public void tour(){
-        Gc.Couleur [] equipes = {
-            Gc.Couleur.bleu,
-            Gc.Couleur.rouge
-        };
-        Carte carte = new Carte(10, equipes);
-
-        passerTour(carte, 0, Gc.Couleur.bleu);
-        carte.finTour();
-        passerTour(carte, 1, Gc.Couleur.rouge);
-    }
-
-    @Test
     public void initialisation(){
-        Gc.Couleur [] equipes = {
-            Gc.Couleur.bleu,
-            Gc.Couleur.rouge
-        };
-
-        Carte carte = new Carte(10, equipes);
-
-        Gc infanterieB = new Gc();
-        Gc infanterieR = new Gc();
-        infanterieB.setEquipe(Gc.Couleur.bleu);
-        infanterieR.setEquipe(Gc.Couleur.rouge);
 
         verifCase(carte.getCase(0, 0), infanterieB);
         verifCase(carte.getCase(9, 9), infanterieR);
 
+    }
+
+    @Test
+    public void tour(){
+
+        passerTour(carte, 0, Gc.Couleur.bleu);
+        carte.finTour();
+        passerTour(carte, 1, Gc.Couleur.rouge);
 
     }
+
+    @Test
+    public void mouvement(){
+
+        infanterieB.mouvement(carte.getCarte(), 0, 4);
+
+        verifCase(carte.getCase(0, 0), infanterieB);
+        verifCase(carte.getCase(0, 4), null);
+
+        infanterieB.mouvement(carte.getCarte(), 0, 2);
+
+        verifCase(carte.getCase(0, 2), infanterieB);
+        verifCase(carte.getCase(0, 0), null);
+
+        infanterieB.mouvement(carte.getCarte(), 0, 1);
+
+        verifCase(carte.getCase(0, 2), infanterieB);
+        verifCase(carte.getCase(0, 1), null);
+    }
+
+    @Test
+    public void attaque(){
+        donneAttaque(infanterieB, infanterieR, 90);
+    }
+
 }
