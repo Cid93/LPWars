@@ -34,4 +34,8 @@ public class Case{
 		this.gc = theGc;
 	}
 
+	public Boolean estVide() {
+		return true;
+	}
+
 }

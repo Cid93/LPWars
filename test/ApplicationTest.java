@@ -55,6 +55,11 @@ public class ApplicationTest {
         assertThat(theCarte.getEquipeActuelle()).isEqualTo(theCouleur);
     }
 
+    public void verifCase(Case theCase, Gc theGc){
+        assertThat(theCase.estVide()).isEqualTo(Boolean.FALSE);
+        assertThat(theCase.getGc().getEquipe()).isEqualTo(theGc.getEquipe());
+    }
+
     @Test
     public void attaque(){
         donneAttaque(new Gc(), new Gc(), 90);
@@ -71,5 +76,25 @@ public class ApplicationTest {
         passerTour(carte, 0, Gc.Couleur.bleu);
         carte.finTour();
         passerTour(carte, 1, Gc.Couleur.rouge);
+    }
+
+    @Test
+    public void initialisation(){
+        Gc.Couleur [] equipes = {
+            Gc.Couleur.bleu,
+            Gc.Couleur.rouge
+        };
+
+        Carte carte = new Carte(10, equipes);
+
+        Gc infanterieB = new Gc();
+        Gc infanterieR = new Gc();
+        infanterieB.setEquipe(Gc.Couleur.bleu);
+        infanterieR.setEquipe(Gc.Couleur.rouge);
+
+        verifCase(carte.getCase(0, 0), infanterieB);
+        verifCase(carte.getCase(9, 9), infanterieR);
+
+
     }
 }
