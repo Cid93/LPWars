@@ -35,7 +35,7 @@ public class Case{
 	}
 
 	public Boolean estVide() {
-		return true;
+		return (gc == null);
 	}
 
 }

@@ -50,6 +50,16 @@ public class Carte{
 
 	public Carte(Integer theCote, Gc.Couleur [] theEquipes){
 		carte = new Case[theCote][theCote];
+
+		for(int i=0; i < theCote; ++i){
+			for (int j=0; j < theCote ; ++j){
+				carte[i][j] = new Case();
+			}
+		}
+
+		carte[0][0].setGc(new Gc(Gc.Couleur.bleu));
+		carte[9][9].setGc(new Gc(Gc.Couleur.rouge));
+
 		compteur = 0;
 		equipes = new LinkedList<Gc.Couleur>();
 		for(Gc.Couleur newOne : theEquipes){

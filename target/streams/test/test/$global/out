@@ -4,22 +4,16 @@
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mtour[0m started[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mtour[0m finished[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36minitialisation[0m started[0m
-[0m[[31merror[0m] [0mTest [33mApplicationTest[0m.[31minitialisation[0m failed: java.lang.[31mNullPointerException[0m: null[0m
-[0m[[31merror[0m] [0m    at ApplicationTest.verifCase([35mApplicationTest.java[0m:[33m59[0m)[0m
-[0m[[31merror[0m] [0m    at ApplicationTest.initialisation([35mApplicationTest.java[0m:[33m95[0m)[0m
-[0m[[31merror[0m] [0m    ...[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36minitialisation[0m finished[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 3 total, 0.05s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 3 total, 0.029s[0m[0m
 [0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mtest[0m started[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mtest[0m finished[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 8.174s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 5.238s[0m[0m
 [0m[[0mdebug[0m] [0mFramework implementation 'org.specs2.runner.Specs2Framework' not present.[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
 [0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
-[0m[[31merror[0m] [0mFailed: Total 4, Failed 1, Errors 0, Passed 3[0m
+[0m[[0minfo[0m] [0mPassed: Total 4, Failed 0, Errors 0, Passed 4[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	ApplicationTest[0m
 [0m[[0mdebug[0m] [0m	IntegrationTest[0m
-[0m[[31merror[0m] [0mFailed tests:[0m
-[0m[[31merror[0m] [0m	ApplicationTest[0m
-[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
