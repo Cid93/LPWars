@@ -73,8 +73,12 @@ public class ApplicationTest {
     }
 
     public void verifCase(Case theCase, Gc theGc){
-        assertThat(theCase.estVide()).isEqualTo(Boolean.FALSE);
-        assertThat(theCase.getGc().getEquipe()).isEqualTo(theGc.getEquipe());
+        if(theGc != null){
+            assertThat(theCase.estVide()).isEqualTo(Boolean.FALSE);
+            assertThat(theCase.getGc().getEquipe()).isEqualTo(theGc.getEquipe());
+        } else {
+            assertThat(theCase.estVide()).isEqualTo(Boolean.TRUE);
+        }
     }
 
     @Test

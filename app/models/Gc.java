@@ -82,8 +82,14 @@ public class Gc{
 		return (pv <= 0);
 	}
 
-	public void mouvement(Case[][] theCarte, Integer thei, Integer thej){
-
+	public void mouvement(Case [][] theCarte, Integer thei, Integer thej){
+		if(Math.abs(i - thei) + Math.abs(j - thej) <= pm){
+			theCarte[thei][thej].setGc(this);
+			theCarte[i][j].setGc(null);
+			i = thei;
+			j = thej;
+			pm = 0;
+		}
 	}
 
 	public void attaque(Gc gcDef){

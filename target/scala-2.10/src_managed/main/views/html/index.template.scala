@@ -81,7 +81,7 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Feb 11 20:35:33 CET 2014
+                    DATE: Tue Feb 11 20:55:04 CET 2014
                     SOURCE: /home/cid/LPWars/app/views/index.scala.html
                     HASH: dbd504283c10b032b71b3dbb4075dcd159f9a04c
                     MATRIX: 774->1|885->18|922->21|943->34|982->36|1572->595
