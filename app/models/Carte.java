@@ -25,7 +25,8 @@ public class Carte{
 	private Integer compteur;
 
 	private List<Gc.Couleur> equipes;
-	private Iterator<Gc.Couleur> equipeActuelle;
+	private Gc.Couleur equipeActuelle;
+	private Iterator<Gc.Couleur> equipeActuelleIt;
 
 	/**
 	 * Getters and setters
@@ -40,29 +41,36 @@ public class Carte{
 	}
 
 	public Gc.Couleur getEquipeActuelle(){
-		return this.equipeActuelle.next();
+		return this.equipeActuelle;
 	}
 
 	public void setcase(Integer i, Integer j, Case theCase){
 		this.carte[i][j] = theCase;
 	}
 
-	public Carte(){
-		carte = null;
-		equipes = null;
-		compteur = 0;
-	}
-
 	public Carte(Integer theCote, Gc.Couleur [] theEquipes){
 		carte = new Case[theCote][theCote];
-		/*equipes = new LinkedList<Gc.Couleur>();
+		compteur = 0;
+		equipes = new LinkedList<Gc.Couleur>();
 		for(Gc.Couleur newOne : theEquipes){
 			equipes.add(newOne);
-		}*/
+		}
+
+		equipeActuelleIt = equipes.iterator();
+		equipeActuelle = equipeActuelleIt.next();
 	}
 
 	public void finTour(){
-		// TODO
+		
+		++compteur;
+
+		if(equipeActuelleIt.hasNext()){
+			equipeActuelle = equipeActuelleIt.next();
+		} else {
+			equipeActuelleIt = equipes.iterator();
+			equipeActuelle = equipeActuelleIt.next();
+		}
+
 		return;
 	}
 
