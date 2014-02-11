@@ -53,10 +53,12 @@ public class ApplicationTest {
      */
     public void donneAttaque(Gc att, Gc def, Integer pvrestant) {
 
-        att.attaque(def);
+        Boolean effectuer = att.attaque(def);
 
         assertThat(def.getPv()).isEqualTo(pvrestant);
-        assertThat(att.getPm()).isEqualTo(0);
+        
+        if(effectuer) assertThat(att.getPm()).isEqualTo(0);
+        else assertThat(att.getPm()).isEqualTo(2);
 
         if(pvrestant > 0){
             assertThat(def.estMort()).isEqualTo(Boolean.FALSE);

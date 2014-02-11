@@ -98,18 +98,24 @@ public class Gc{
 		return (pv <= 0);
 	}
 
-	public void mouvement(Case [][] theCarte, Integer thei, Integer thej){
+	public Boolean mouvement(Case [][] theCarte, Integer thei, Integer thej){
 		if(Math.abs(i - thei) + Math.abs(j - thej) <= pm){
 			theCarte[thei][thej].setGc(this);
 			theCarte[i][j].setGc(null);
 			i = thei;
 			j = thej;
 			pm = 0;
+			return true;
 		}
+		else return false;
 	}
 
-	public void attaque(Gc gcDef){
-		gcDef.setPv(gcDef.getPv() - this.pa);
-		this.pm = 0;
+	public Boolean attaque(Gc gcDef){
+		if(Math.abs(i - gcDef.geti()) + Math.abs(j - gcDef.getj()) == 1){
+			gcDef.setPv(gcDef.getPv() - this.pa);
+			this.pm = 0;
+			return true;
+		}
+		else return false;
 	}
 }
