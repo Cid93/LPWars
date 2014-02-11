@@ -48,8 +48,28 @@ public class ApplicationTest {
         }
     }
 
+    public void passerTour(Carte theCarte,
+            Integer theNbTour,
+            Gc.Couleur theCouleur){
+        assertThat(theCarte.getCompteur()).isEqualTo(theNbTour);
+        assertThat(theCarte.getEquipeActuelle()).isEqualTo(theCouleur);
+    }
+
     @Test
     public void attaque(){
         donneAttaque(new Gc(), new Gc(), 90);
+    }
+
+    @Test
+    public void tour(){
+        Gc.Couleur [] equipes = {
+            Gc.Couleur.bleu,
+            Gc.Couleur.rouge
+        };
+        Carte carte = new Carte(10, equipes);
+
+        passerTour(carte, 0, Gc.Couleur.bleu);
+        carte.finTour();
+        passerTour(carte, 1, Gc.Couleur.rouge);
     }
 }
