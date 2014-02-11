@@ -79,5 +79,6 @@ public class Gc{
 
 	public void attaque(Gc gcDef){
 		gcDef.setPv(gcDef.getPv() - this.pa);
+		this.pm = 0;
 	}
 }
