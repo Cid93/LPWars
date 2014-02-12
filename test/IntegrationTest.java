@@ -12,17 +12,34 @@ import static org.fluentlenium.core.filter.FilterConstructor.*;
 public class IntegrationTest {
 
     /**
-     * add your integration test here
-     * in this example we just check if the welcome page is being shown
+     * Test sur la page d'accueil
      */
     @Test
-    public void test() {
+    public void index() {
         running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
             public void invoke(TestBrowser browser) {
                 browser.goTo("http://localhost:3333");
                 assertThat(browser.pageSource()).contains("LPWars");
+                assertThat(browser.pageSource()).contains("Bienvenue sur LPWars");
+                assertThat(browser.pageSource()).contains("<a href=\"/jouer\">");
             }
         });
     }
 
+    /**
+     * Test sur la premiere page
+     * page jouer
+     */
+    @Test
+    public void plateau() {
+        running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
+            public void invoke(TestBrowser browser) {
+                browser.goTo("http://localhost:3333/jouer");
+                assertThat(browser.pageSource()).contains("LPWars");
+                assertThat(browser.pageSource()).contains("<table id=\"plateau\">");
+                assertThat(browser.pageSource()).contains("<td class=\"bleu\">");
+                assertThat(browser.pageSource()).contains("<td class=\"rouge\">");
+            }
+        });
+    }
 }

@@ -15,4 +15,8 @@ public class Application extends Controller {
         return ok(index.render("LPWars"));
     }
 
+    public static Result plateau() {
+        return ok(index.render("LPWars"));
+    }
+
 }
