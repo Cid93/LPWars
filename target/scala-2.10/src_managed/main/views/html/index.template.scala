@@ -45,8 +45,8 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Feb 12 18:36:04 CET 2014
-                    SOURCE: /home/cid/LPWars/app/views/index.scala.html
+                    DATE: Wed Feb 12 20:17:43 CET 2014
+                    SOURCE: /home/jonathan/LPWars/app/views/index.scala.html
                     HASH: ce8b130a449c9329ada1161af98307de34652acb
                     MATRIX: 774->1|885->18|922->21|967->58|1006->60|1056->75|1070->81|1113->103|1157->117
                     LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|33->5|35->7

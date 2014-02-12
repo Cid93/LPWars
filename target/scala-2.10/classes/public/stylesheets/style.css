@@ -1,0 +1,31 @@
+#plateau {
+	background-image: url(../images/grass.jpg);
+	background-size: 100% 100%;
+	border-collapse: collapse;
+	border: 3px solid grey;
+	margin-left: 2%;
+}
+
+#plateau td {
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+}
+
+.bleu {
+	background-image: url(../images/blue_inf.png);
+	background-size: 100% 100%;
+	color: white;
+	text-align: right;
+	vertical-align: bottom;
+	font-weight: bold;
+}
+
+.rouge {
+	background-image: url(../images/red_inf.png);
+	background-size: 100% 100%;
+	color: white;
+	text-align: right;
+	vertical-align: bottom;
+	font-weight: bold;
+}

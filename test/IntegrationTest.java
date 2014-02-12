@@ -27,7 +27,7 @@ public class IntegrationTest {
     }
 
     /**
-     * Test sur la premiere page
+     * Test sur la page plateau
      * page jouer
      */
     @Test
@@ -39,6 +39,7 @@ public class IntegrationTest {
                 assertThat(browser.pageSource()).contains("<table id=\"plateau\">");
                 assertThat(browser.pageSource()).contains("<td class=\"bleu\">");
                 assertThat(browser.pageSource()).contains("<td class=\"rouge\">");
+                assertThat(browser.pageSource()).contains("<a href=\"/jouer/informations/0,0\">");
             }
         });
     }

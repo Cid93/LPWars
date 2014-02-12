@@ -7,9 +7,9 @@
       <tr>
          @for(cellule <- ligne){
             @if(cellule.estVide()){
-               <td>x</td>
+               <td></td>
             } else {
-               <td class="@cellule.getGc().getEquipe()">x</td>
+               <td class="@cellule.getGc().getEquipe()">@cellule.getGc().getPv()</td>
             }
          }
       </tr>
