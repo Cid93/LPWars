@@ -7,166 +7,17 @@
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mmouvement[0m finished[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36minitialisation[0m started[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36minitialisation[0m finished[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 0.027s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 0.032s[0m[0m
 [0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mplateau[0m started[0m
-[0m[[31merror[0m] [0mTest [33mIntegrationTest[0m.[31mplateau[0m failed: <'<?xml version="1.0" encoding="UTF-8"?>[0m
-[0m[[31merror[0m] [0m<html>[0m
-[0m[[31merror[0m] [0m  <head>[0m
-[0m[[31merror[0m] [0m    <title>[0m
-[0m[[31merror[0m] [0m      LPWars[0m
-[0m[[31merror[0m] [0m    </title>[0m
-[0m[[31merror[0m] [0m    <link rel="stylesheet" media="screen" href="/assets/stylesheets/main.css"/>[0m
-[0m[[31merror[0m] [0m    <link rel="stylesheet" media="screen" href="/assets/stylesheets/style.css"/>[0m
-[0m[[31merror[0m] [0m    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png"/>[0m
-[0m[[31merror[0m] [0m    <script src="/assets/javascripts/jquery-1.9.0.min.js" type="text/javascript">[0m
-[0m[[31merror[0m] [0m    </script>[0m
-[0m[[31merror[0m] [0m  </head>[0m
-[0m[[31merror[0m] [0m  <body style="zoom: 1;">[0m
-[0m[[31merror[0m] [0m    <h1>[0m
-[0m[[31merror[0m] [0m      Bienvenue sur LPWars[0m
-[0m[[31merror[0m] [0m    </h1>[0m
-[0m[[31merror[0m] [0m    <table id="plateau">[0m
-[0m[[31merror[0m] [0m      <tbody>[0m
-[0m[[31merror[0m] [0m        <tr>[0m
-[0m[[31merror[0m] [0m          <td class="bleu">[0m
-[0m[[31merror[0m] [0m            100[0m
-[0m[[31merror[0m] [0m          </td>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m        </tr>[0m
-[0m[[31merror[0m] [0m        <tr>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m        </tr>[0m
-[0m[[31merror[0m] [0m        <tr>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m        </tr>[0m
-[0m[[31merror[0m] [0m        <tr>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m        </tr>[0m
-[0m[[31merror[0m] [0m        <tr>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m        </tr>[0m
-[0m[[31merror[0m] [0m        <tr>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m        </tr>[0m
-[0m[[31merror[0m] [0m        <tr>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m        </tr>[0m
-[0m[[31merror[0m] [0m        <tr>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m        </tr>[0m
-[0m[[31merror[0m] [0m        <tr>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m        </tr>[0m
-[0m[[31merror[0m] [0m        <tr>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td/>[0m
-[0m[[31merror[0m] [0m          <td class="rouge">[0m
-[0m[[31merror[0m] [0m            100[0m
-[0m[[31merror[0m] [0m          </td>[0m
-[0m[[31merror[0m] [0m        </tr>[0m
-[0m[[31merror[0m] [0m      </tbody>[0m
-[0m[[31merror[0m] [0m    </table>[0m
-[0m[[31merror[0m] [0m  </body>[0m
-[0m[[31merror[0m] [0m</html>[0m
-[0m[[31merror[0m] [0m'> should contain the String:<'<a href="/jouer/informations/0,0">'>[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mplateau[0m finished[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mindex[0m started[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mindex[0m finished[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 7.907s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 7.254s[0m[0m
 [0m[[0mdebug[0m] [0mFramework implementation 'org.specs2.runner.Specs2Framework' not present.[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
 [0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
-[0m[[31merror[0m] [0mFailed: Total 6, Failed 1, Errors 0, Passed 5[0m
+[0m[[0minfo[0m] [0mPassed: Total 6, Failed 0, Errors 0, Passed 6[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	ApplicationTest[0m
-[0m[[31merror[0m] [0mFailed tests:[0m
-[0m[[31merror[0m] [0m	IntegrationTest[0m
-[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0mdebug[0m] [0m	IntegrationTest[0m

@@ -21,4 +21,10 @@ public class Application extends Controller {
         return ok(plateau.render("LPWars", carte));
     }
 
+    public static Result info(Integer i, Integer j) {
+    	Gc.Couleur [] equipes = {Gc.Couleur.bleu, Gc.Couleur.rouge};
+    	Carte carte = new Carte(10, equipes);
+        return ok(plateau.render("LPWars", carte));
+    }
+
 }

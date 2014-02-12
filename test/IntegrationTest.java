@@ -39,7 +39,7 @@ public class IntegrationTest {
                 assertThat(browser.pageSource()).contains("<table id=\"plateau\">");
                 assertThat(browser.pageSource()).contains("<td class=\"bleu\">");
                 assertThat(browser.pageSource()).contains("<td class=\"rouge\">");
-                assertThat(browser.pageSource()).contains("<a href=\"/jouer/informations/0,0\">");
+                assertThat(browser.pageSource()).contains("<a href=\"/jouer/informations?i=0&amp;j=0\">");
             }
         });
     }

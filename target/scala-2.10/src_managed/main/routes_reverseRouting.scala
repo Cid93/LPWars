@@ -1,6 +1,6 @@
 // @SOURCE:/home/jonathan/LPWars/conf/routes
-// @HASH:2e8e9967ae77117c351e256a90e487ad2cd2ab84
-// @DATE:Wed Feb 12 20:17:41 CET 2014
+// @HASH:e231bc1581c7fb779c3c79e94f964417b7560e22
+// @DATE:Wed Feb 12 20:57:36 CET 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,16 +13,17 @@ import play.libs.F
 import Router.queryString
 
 
-// @LINE:10
+// @LINE:12
+// @LINE:8
 // @LINE:7
 // @LINE:6
 package controllers {
 
-// @LINE:10
+// @LINE:12
 class ReverseAssets {
     
 
-// @LINE:10
+// @LINE:12
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -31,10 +32,17 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:8
 // @LINE:7
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:8
+def info(i:Integer, j:Integer): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "jouer/informations" + queryString(List(Some(implicitly[QueryStringBindable[Integer]].unbind("i", i)), Some(implicitly[QueryStringBindable[Integer]].unbind("j", j)))))
+}
+                                                
 
 // @LINE:7
 def plateau(): Call = {
@@ -54,16 +62,17 @@ def index(): Call = {
                   
 
 
-// @LINE:10
+// @LINE:12
+// @LINE:8
 // @LINE:7
 // @LINE:6
 package controllers.javascript {
 
-// @LINE:10
+// @LINE:12
 class ReverseAssets {
     
 
-// @LINE:10
+// @LINE:12
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -77,10 +86,22 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:8
 // @LINE:7
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:8
+def info : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.info",
+   """
+      function(i,j) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jouer/informations" + _qS([(""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("i", i), (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("j", j)])})
+      }
+   """
+)
+                        
 
 // @LINE:7
 def plateau : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -110,17 +131,18 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:10
+// @LINE:12
+// @LINE:8
 // @LINE:7
 // @LINE:6
 package controllers.ref {
 
 
-// @LINE:10
+// @LINE:12
 class ReverseAssets {
     
 
-// @LINE:10
+// @LINE:12
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -129,10 +151,17 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:8
 // @LINE:7
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:8
+def info(i:Integer, j:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.info(i, j), HandlerDef(this, "controllers.Application", "info", Seq(classOf[Integer], classOf[Integer]), "GET", """""", _prefix + """jouer/informations""")
+)
+                      
 
 // @LINE:7
 def plateau(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(

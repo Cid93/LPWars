@@ -2,17 +2,21 @@
 
 @main(message, "Bienvenue sur LPWars") {
 
-   <table id="plateau">
+<table id="plateau">
    @for(ligne <- carte.getCarte()) {
-      <tr>
-         @for(cellule <- ligne){
-            @if(cellule.estVide()){
-               <td></td>
-            } else {
-               <td class="@cellule.getGc().getEquipe()">@cellule.getGc().getPv()</td>
-            }
-         }
-      </tr>
-   }
-    </table>
+   <tr>
+      @for(cellule <- ligne){
+      @if(cellule.estVide()){
+      <td></td>
+   } else {
+   <td class="@cellule.getGc().getEquipe()">
+   <a href="@routes.Application.info(cellule.getGc().geti(),cellule.getGc().getj())">
+         <span>@cellule.getGc().getPv()</span>
+      </a>
+   </td>
+}
+}
+</tr>
+}
+</table>
 }
