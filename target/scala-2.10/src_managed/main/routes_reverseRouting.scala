@@ -1,6 +1,6 @@
-// @SOURCE:/home/jonathan/LPWars/conf/routes
+// @SOURCE:/home/cid/LPWars/conf/routes
 // @HASH:e231bc1581c7fb779c3c79e94f964417b7560e22
-// @DATE:Wed Feb 12 20:57:36 CET 2014
+// @DATE:Wed Feb 12 22:25:40 CET 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
