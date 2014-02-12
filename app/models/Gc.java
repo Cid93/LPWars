@@ -7,32 +7,32 @@ import play.data.validation.Constraints.*;
 /**
  * Classe gerant les groupes de combats
  */
-public class Gc{
+public class Gc {
 
 	/**
 	 * Point de vie du GC
 	 * en pourcent
 	 */
-	private Integer pv;
+	public Integer pv;
 
 	/**
 	 * Point d'attaque du GC
 	 */
-	private Integer pa;
+	public Integer pa;
 
 	/**
 	 * Point de mouvement
 	 */
-	private Integer pm;
+	public Integer pm;
 
-	private Integer i;
-	private Integer j;
+	public Integer i;
+	public Integer j;
 
 	/**
 	 * Equipe du GC
 	 */
 	public enum Couleur{bleu, rouge};
-	private Couleur equipe;
+	public Couleur equipe;
 
 	/**
 	 * Getters and setters

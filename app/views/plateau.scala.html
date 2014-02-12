@@ -1,0 +1,18 @@
+@(message: String, carte: Carte)
+
+@main(message, "Bienvenue sur LPWars") {
+
+   <table id="plateau">
+   @for(ligne <- carte.getCarte()) {
+      <tr>
+         @for(cellule <- ligne){
+            @if(cellule.estVide()){
+               <td>x</td>
+            } else {
+               <td class="@cellule.getGc().getEquipe()">x</td>
+            }
+         }
+      </tr>
+   }
+    </table>
+}

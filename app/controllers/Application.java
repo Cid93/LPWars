@@ -16,7 +16,9 @@ public class Application extends Controller {
     }
 
     public static Result plateau() {
-        return ok(index.render("LPWars"));
+    	Gc.Couleur [] equipes = {Gc.Couleur.bleu, Gc.Couleur.rouge};
+    	Carte carte = new Carte(10, equipes);
+        return ok(plateau.render("LPWars", carte));
     }
 
 }
