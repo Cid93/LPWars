@@ -16,15 +16,27 @@ public class Application extends Controller {
     }
 
     public static Result plateau() {
-    	Gc.Couleur [] equipes = {Gc.Couleur.bleu, Gc.Couleur.rouge};
-    	Carte carte = new Carte(10, equipes);
-        return ok(plateau.render("LPWars", carte));
+        Gc.Couleur [] equipes = {Gc.Couleur.bleu, Gc.Couleur.rouge};
+        Carte carte = new Carte(10, equipes);
+        return ok(plateau.render("LPWars", carte, null, null));
     }
 
     public static Result info(Integer i, Integer j) {
-    	Gc.Couleur [] equipes = {Gc.Couleur.bleu, Gc.Couleur.rouge};
-    	Carte carte = new Carte(10, equipes);
-        return ok(plateau.render("LPWars", carte));
+        Gc.Couleur [] equipes = {Gc.Couleur.bleu, Gc.Couleur.rouge};
+        Carte carte = new Carte(10, equipes);
+        return ok(plateau.render("LPWars", carte, i, j));
+    }
+
+    public static Result sedeplacer() {
+        Gc.Couleur [] equipes = {Gc.Couleur.bleu, Gc.Couleur.rouge};
+        Carte carte = new Carte(10, equipes);
+        return ok(plateau.render("LPWars", carte, null, null));
+    }
+    
+    public static Result attaquer() {
+        Gc.Couleur [] equipes = {Gc.Couleur.bleu, Gc.Couleur.rouge};
+        Carte carte = new Carte(10, equipes);
+        return ok(plateau.render("LPWars", carte, null, null));
     }
 
 }

@@ -31,13 +31,21 @@
 }
 
 
-.bleu {
+td.bleu {
 	background-image: url(../images/blue_inf.png);
 	background-size: 100% 100%;
 	vertical-align: bottom;
 }
 
-.rouge {
+td.rouge {
 	background-image: url(../images/red_inf.png);
 	background-size: 100% 100%;
+}
+
+div.bleu{
+	background-color: #AAAAFF;
+}
+
+div.rouge{
+	background-color: #FFAAAA;
 }

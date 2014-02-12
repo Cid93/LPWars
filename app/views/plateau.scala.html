@@ -1,22 +1,39 @@
-@(message: String, carte: Carte)
+@(message: String, carte: Carte, i: Integer, j: Integer)
 
 @main(message, "Bienvenue sur LPWars") {
 
-<table id="plateau">
-   @for(ligne <- carte.getCarte()) {
-   <tr>
-      @for(cellule <- ligne){
-      @if(cellule.estVide()){
-      <td></td>
-   } else {
-   <td class="@cellule.getGc().getEquipe()">
-   <a href="@routes.Application.info(cellule.getGc().geti(),cellule.getGc().getj())">
-         <span>@cellule.getGc().getPv()</span>
-      </a>
-   </td>
-}
-}
-</tr>
-}
-</table>
+   <table id="plateau">
+      @for(ligne <- carte.getCarte()) {
+         <tr>
+            @for(cellule <- ligne){
+               @if(cellule.estVide()){
+                  <td></td>
+               } else {
+                  <td class="@cellule.getGc().getEquipe()">
+                  <a href="@routes.Application.info(cellule.getGc().geti(),cellule.getGc().getj())">
+                        <span>@cellule.getGc().getPv()</span>
+                     </a>
+                  </td>
+               }
+            }
+         </tr>
+      }
+   </table>
+   @if(i != null && j != null){
+      <div id="info" class="@carte.getCase(i, j).getGc().getEquipe()">
+         <label>PV</label> @carte.getCase(i, j).getGc().getPv()<br/>
+         <label>PA</label> @carte.getCase(i, j).getGc().getPa()<br/>
+         <label>PM</label> @carte.getCase(i, j).getGc().getPm()
+         @if(carte.getEquipeActuelle() ==
+               carte.getCase(i, j).getGc().getEquipe()){
+               <div id="action">
+                  <a href="@routes.Application.sedeplacer()">
+                     Se d&eacute;placer</a>
+                  <a href="@routes.Application.attaquer()">
+                     Attaquer
+                  </a>
+               </div>
+         }
+      </div>
+   }
 }

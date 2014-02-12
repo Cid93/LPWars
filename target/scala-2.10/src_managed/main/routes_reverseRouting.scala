@@ -1,6 +1,6 @@
 // @SOURCE:/home/cid/LPWars/conf/routes
-// @HASH:e231bc1581c7fb779c3c79e94f964417b7560e22
-// @DATE:Wed Feb 12 22:25:40 CET 2014
+// @HASH:55b8e69a2ad47bc08c9528d5bcef51c0dd22d818
+// @DATE:Wed Feb 12 23:37:07 CET 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,17 +13,19 @@ import play.libs.F
 import Router.queryString
 
 
-// @LINE:12
+// @LINE:13
+// @LINE:10
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 package controllers {
 
-// @LINE:12
+// @LINE:13
 class ReverseAssets {
     
 
-// @LINE:12
+// @LINE:13
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -32,11 +34,25 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:10
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:7
+def plateau(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "jouer")
+}
+                                                
+
+// @LINE:9
+def sedeplacer(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "jouer/mouvement")
+}
+                                                
 
 // @LINE:8
 def info(i:Integer, j:Integer): Call = {
@@ -44,9 +60,9 @@ def info(i:Integer, j:Integer): Call = {
 }
                                                 
 
-// @LINE:7
-def plateau(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "jouer")
+// @LINE:10
+def attaquer(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "jouer/attaque")
 }
                                                 
 
@@ -62,17 +78,19 @@ def index(): Call = {
                   
 
 
-// @LINE:12
+// @LINE:13
+// @LINE:10
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 package controllers.javascript {
 
-// @LINE:12
+// @LINE:13
 class ReverseAssets {
     
 
-// @LINE:12
+// @LINE:13
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -86,11 +104,35 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:10
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:7
+def plateau : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.plateau",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jouer"})
+      }
+   """
+)
+                        
+
+// @LINE:9
+def sedeplacer : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.sedeplacer",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jouer/mouvement"})
+      }
+   """
+)
+                        
 
 // @LINE:8
 def info : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -103,12 +145,12 @@ def info : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:7
-def plateau : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.plateau",
+// @LINE:10
+def attaquer : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.attaquer",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jouer"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jouer/attaque"})
       }
    """
 )
@@ -131,18 +173,20 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:12
+// @LINE:13
+// @LINE:10
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 package controllers.ref {
 
 
-// @LINE:12
+// @LINE:13
 class ReverseAssets {
     
 
-// @LINE:12
+// @LINE:13
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -151,11 +195,25 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:10
+// @LINE:9
 // @LINE:8
 // @LINE:7
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:7
+def plateau(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.plateau(), HandlerDef(this, "controllers.Application", "plateau", Seq(), "GET", """""", _prefix + """jouer""")
+)
+                      
+
+// @LINE:9
+def sedeplacer(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.sedeplacer(), HandlerDef(this, "controllers.Application", "sedeplacer", Seq(), "GET", """""", _prefix + """jouer/mouvement""")
+)
+                      
 
 // @LINE:8
 def info(i:Integer, j:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
@@ -163,9 +221,9 @@ def info(i:Integer, j:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.Ha
 )
                       
 
-// @LINE:7
-def plateau(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.plateau(), HandlerDef(this, "controllers.Application", "plateau", Seq(), "GET", """""", _prefix + """jouer""")
+// @LINE:10
+def attaquer(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.attaquer(), HandlerDef(this, "controllers.Application", "attaquer", Seq(), "GET", """""", _prefix + """jouer/attaque""")
 )
                       
 

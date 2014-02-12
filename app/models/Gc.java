@@ -13,26 +13,26 @@ public class Gc {
 	 * Point de vie du GC
 	 * en pourcent
 	 */
-	public Integer pv;
+	private Integer pv;
 
 	/**
 	 * Point d'attaque du GC
 	 */
-	public Integer pa;
+	private Integer pa;
 
 	/**
 	 * Point de mouvement
 	 */
-	public Integer pm;
+	private Integer pm;
 
-	public Integer i;
-	public Integer j;
+	private Integer i;
+	private Integer j;
 
 	/**
 	 * Equipe du GC
 	 */
 	public enum Couleur{bleu, rouge};
-	public Couleur equipe;
+	private Couleur equipe;
 
 	/**
 	 * Getters and setters
