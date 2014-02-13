@@ -6,11 +6,10 @@
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mmouvement[0m started[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mmouvement[0m finished[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mfinDePartie[0m started[0m
-[0m[[31merror[0m] [0mTest [33mApplicationTest[0m.[31mfinDePartie[0m failed: expected:<bleu> but was:<null>[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mfinDePartie[0m finished[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36minitialisation[0m started[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36minitialisation[0m finished[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 5 total, 0.088s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 5 total, 0.04s[0m[0m
 [0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mplateau[0m started[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mplateau[0m finished[0m
@@ -24,13 +23,11 @@
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mmouvement[0m finished[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36minfoRouge[0m started[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36minfoRouge[0m finished[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 6 total, 16.432s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 6 total, 15.769s[0m[0m
 [0m[[0mdebug[0m] [0mFramework implementation 'org.specs2.runner.Specs2Framework' not present.[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
 [0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
-[0m[[31merror[0m] [0mFailed: Total 11, Failed 1, Errors 0, Passed 10[0m
+[0m[[0minfo[0m] [0mPassed: Total 11, Failed 0, Errors 0, Passed 11[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	ApplicationTest[0m
 [0m[[0mdebug[0m] [0m	IntegrationTest[0m
-[0m[[31merror[0m] [0mFailed tests:[0m
-[0m[[31merror[0m] [0m	ApplicationTest[0m
-[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

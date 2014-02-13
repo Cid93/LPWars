@@ -89,8 +89,21 @@ public class Carte{
 	}
 
 	public Gc.Couleur gagner(){
-		// TODO
-		return null;
+		Gc.Couleur enVie = null;
+
+        for(Case [] ligne : carte){
+            for(Case cellule : ligne){
+                if(cellule.getGc() != null){
+                	if(enVie != null && cellule.getGc().getEquipe() != enVie){
+                    	return null;
+                	} else {
+                 	   enVie = cellule.getGc().getEquipe();
+                	}
+                }
+            }
+        }
+
+		return enVie;
 	}
 
 }
