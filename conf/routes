@@ -6,7 +6,7 @@
 GET     /                           	controllers.Application.index()
 GET		/jouer							controllers.Application.plateau()
 GET		/jouer/informations				controllers.Application.info(i: Integer, j: Integer)
-GET		/jouer/mouvement				controllers.Application.sedeplacer()
+GET		/jouer/mouvement				controllers.Application.sedeplacer(i: Integer, j: Integer, thei: Integer, thej: Integer)
 GET		/jouer/attaque					controllers.Application.attaquer()
 
 # Map static resources from the /public folder to the /assets URL path

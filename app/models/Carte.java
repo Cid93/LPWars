@@ -57,7 +57,7 @@ public class Carte{
 
 		for(int i=0; i < theCote; ++i){
 			for (int j=0; j < theCote ; ++j){
-				carte[i][j] = new Case();
+				carte[i][j] = new Case(i, j);
 			}
 		}
 

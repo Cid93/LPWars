@@ -10,18 +10,33 @@
          <tr>
             @for(cellule <- ligne){
                @if(cellule.estVide()){
-                  <td></td>
+                  @if( i != null 
+                        && j != null 
+                        && carte.getEquipeActuelle() ==
+                           carte.getCase(i, j).getGc().getEquipe()
+                        && (
+                           Math.abs((cellule.geti() + cellule.getj()) - 
+                           (carte.getCase(i, j)
+                              .getGc()
+                              .geti()
+                              + carte.getCase(i, j).getGc().getj()
+                           )) <= carte.getCase(i, j).getGc.getPm())) {
+                     <td>
+                        <a href="@routes.Application.sedeplacer(i, j, cellule.geti(), cellule.getj())"></a>
+                     </td>
+                  } else {
+                     <td></td>
+                  }
                } else {
                @if(i == cellule.getGc().geti() && j == cellule.getGc().getj()) {
                   <td class="@cellule.getGc().getEquipe()">
-                  <a href="@routes.Application.info(cellule.getGc().geti(),cellule.getGc().getj())" class=" selected">
+                     <a href="@routes.Application.info(cellule.getGc().geti(),cellule.getGc().getj())" class=" selected">
                         <span>@cellule.getGc().getPv()</span>
                      </a>
                   </td>
-
                } else {
                   <td class="@cellule.getGc().getEquipe()">
-                  <a href="@routes.Application.info(cellule.getGc().geti(),cellule.getGc().getj())">
+                     <a href="@routes.Application.info(cellule.getGc().geti(),cellule.getGc().getj())">
                         <span>@cellule.getGc().getPv()</span>
                      </a>
                   </td>
@@ -39,9 +54,9 @@
          @if(carte.getEquipeActuelle() ==
                carte.getCase(i, j).getGc().getEquipe()){
                <div id="action">
-                  <a class="btn btn-default" href="@routes.Application.sedeplacer()">
+                  <a class="btn btn-default" href="">
                      Se d&eacute;placer</a>
-                  <a class="btn btn-default" href="@routes.Application.attaquer()">
+                  <a class="btn btn-default" href="">
                      Attaquer
                   </a>
                </div>

@@ -27,10 +27,12 @@ public class Application extends Controller {
         return ok(plateau.render("LPWars", carte, i, j));
     }
 
-    public static Result sedeplacer() {
+    public static Result sedeplacer(Integer i, Integer j,
+    		Integer thei, Integer thej) {
         Gc.Couleur [] equipes = {Gc.Couleur.bleu, Gc.Couleur.rouge};
         Carte carte = new Carte(10, equipes);
-        return ok(plateau.render("LPWars", carte, null, null));
+        carte.getCase(i, j).getGc().mouvement(carte.getCarte(), thei, thej);
+        return ok(plateau.render("LPWars", carte, thei, thej));
     }
     
     public static Result attaquer() {

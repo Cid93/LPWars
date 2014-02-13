@@ -15,6 +15,9 @@ public class Case{
 	 */
     private Gc gc;
 
+    private Integer i;
+    private Integer j;
+
 	/**
 	 * Getters and setters
 	 */
@@ -22,12 +25,22 @@ public class Case{
 		return this.gc;
 	}
 
+	public Integer geti(){
+		return i;
+	}
+
+	public Integer getj(){
+		return j;
+	}
+
 	public void setGc(Gc theGc){
 		this.gc = theGc;
 	}
 
-	public Case(){
+	public Case(Integer thei, Integer thej){
 		gc = null;
+		i = thei;
+		j = thej;
 	}
 
 	public Case(Gc theGc){
