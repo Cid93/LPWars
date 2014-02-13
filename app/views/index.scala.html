@@ -1,6 +1,9 @@
 @(message: String)
+@titre() = { 
+	Bienvenue sur LPWars
+}
 
-@main(message, "Bienvenue sur LPWars") {
+@main(message, titre()) {
 
    <a href="@routes.Application.plateau()">Jouer</a>
 

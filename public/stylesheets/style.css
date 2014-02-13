@@ -3,7 +3,6 @@
 	background-size: 100% 100%;
 	border-collapse: collapse;
 	border: 3px solid grey;
-	margin-left: 2%;
 }
 
 #plateau td {
@@ -27,9 +26,12 @@
 #plateau td a span {
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	right: 0;		
 }
 
+.selected {
+	border: 2px inset black;
+}
 
 td.bleu {
 	background-image: url(../images/blue_inf.png);
@@ -42,10 +44,22 @@ td.rouge {
 	background-size: 100% 100%;
 }
 
+span.bleu{
+	color: #AAAAFF;
+}
+
+span.rouge{
+	color: #FFAAAA;
+}
+
 div.bleu{
 	background-color: #AAAAFF;
+	padding: 20px;
+	border-radius: 10px;
 }
 
 div.rouge{
 	background-color: #FFAAAA;
+	padding: 20px;
+	border-radius: 10px;
 }

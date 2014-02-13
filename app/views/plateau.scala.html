@@ -1,35 +1,47 @@
 @(message: String, carte: Carte, i: Integer, j: Integer)
+@titre(equipe: Gc.Couleur, jour: Integer) = { 
+  Au tour de l'équipe <span class="@equipe">@equipe</span> <span class="pull-right">Jour @jour</span>
+}
 
-@main(message, "Bienvenue sur LPWars") {
+@main(message, titre(carte.getEquipeActuelle(), carte.getCompteur())) {
 
-   <table id="plateau">
+   <table id="plateau" class="col-lg-5">
       @for(ligne <- carte.getCarte()) {
          <tr>
             @for(cellule <- ligne){
                @if(cellule.estVide()){
                   <td></td>
                } else {
+               @if(i == cellule.getGc().geti() && j == cellule.getGc().getj()) {
+                  <td class="@cellule.getGc().getEquipe()">
+                  <a href="@routes.Application.info(cellule.getGc().geti(),cellule.getGc().getj())" class=" selected">
+                        <span>@cellule.getGc().getPv()</span>
+                     </a>
+                  </td>
+
+               } else {
                   <td class="@cellule.getGc().getEquipe()">
                   <a href="@routes.Application.info(cellule.getGc().geti(),cellule.getGc().getj())">
                         <span>@cellule.getGc().getPv()</span>
                      </a>
                   </td>
+                  }
                }
             }
          </tr>
       }
    </table>
    @if(i != null && j != null){
-      <div id="info" class="@carte.getCase(i, j).getGc().getEquipe()">
-         <label>PV</label> @carte.getCase(i, j).getGc().getPv()<br/>
-         <label>PA</label> @carte.getCase(i, j).getGc().getPa()<br/>
-         <label>PM</label> @carte.getCase(i, j).getGc().getPm()
+      <div id="info" class="@carte.getCase(i, j).getGc().getEquipe() col-lg-offset-1 col-lg-6">
+         <label>PV :</label> @carte.getCase(i, j).getGc().getPv()<br/>
+         <label>PA :</label> @carte.getCase(i, j).getGc().getPa()<br/>
+         <label>PM :</label> @carte.getCase(i, j).getGc().getPm()<br/><br/>
          @if(carte.getEquipeActuelle() ==
                carte.getCase(i, j).getGc().getEquipe()){
                <div id="action">
-                  <a href="@routes.Application.sedeplacer()">
+                  <a class="btn btn-default" href="@routes.Application.sedeplacer()">
                      Se d&eacute;placer</a>
-                  <a href="@routes.Application.attaquer()">
+                  <a class="btn btn-default" href="@routes.Application.attaquer()">
                      Attaquer
                   </a>
                </div>
