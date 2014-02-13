@@ -36,6 +36,18 @@ public class ApplicationTest {
     public Gc infanterieB;
     public Gc infanterieR;
 
+    private void reinit(){
+        Gc.Couleur [] equipes = {
+            Gc.Couleur.bleu,
+            Gc.Couleur.rouge
+        };
+
+        carte = new Carte(10, equipes);
+
+        infanterieB = new Gc(Gc.Couleur.bleu, 0, 0);
+        infanterieR = new Gc(Gc.Couleur.rouge, 9, 9);
+    }
+
     public ApplicationTest(){
         Gc.Couleur [] equipes = {
             Gc.Couleur.bleu,
@@ -83,6 +95,10 @@ public class ApplicationTest {
         }
     }
 
+    public void verfiFinDePartie(Carte theCarte, Gc.Couleur theEquipe){
+        assertThat(theCarte.gagner()).isEqualTo(theEquipe);
+    }
+
     @Test
     public void initialisation(){
 
@@ -124,6 +140,19 @@ public class ApplicationTest {
         donneAttaque(infanterieB, infanterieR, 100);
         Gc infanterieR2 = new Gc(Gc.Couleur.rouge, 1, 0);
         donneAttaque(infanterieB, infanterieR2, 90);
+    }
+
+    @Test
+    public void finDePartie(){
+        reinit();
+        verfiFinDePartie(carte, null);
+
+        carte.getCase(9, 9).setGc(null);
+        verfiFinDePartie(carte, Gc.Couleur.bleu);
+
+        carte.getCase(9, 9).setGc(infanterieR);
+        carte.getCase(0, 0).setGc(null);
+        verfiFinDePartie(carte, Gc.Couleur.rouge);
     }
 
 }

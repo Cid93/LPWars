@@ -88,4 +88,9 @@ public class Carte{
 		return;
 	}
 
+	public Gc.Couleur gagner(){
+		// TODO
+		return null;
+	}
+
 }
