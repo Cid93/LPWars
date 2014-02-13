@@ -74,7 +74,7 @@ public class IntegrationTest {
                 assertThat(browser.pageSource()).contains("LPWars");
                 assertThat(browser.pageSource()).contains("<table id=\"plateau\" class=\"col-lg-5\">");
                 assertThat(browser.pageSource()).contains("<td class=\"rouge\">");
-                assertThat(browser.pageSource()).contains("<div id=\"info\" class=\"rouge\">");
+                assertThat(browser.pageSource()).contains("<div id=\"info\" class=\"rouge col-lg-offset-1 col-lg-6\">");
             }
         });
     }
