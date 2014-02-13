@@ -1,0 +1,14 @@
+[0m[[0mdebug[0m] [0mCopy play resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/stylesheets/bootstrap.min.css,/home/cid/LPWars/target/scala-2.10/classes/public/stylesheets/bootstrap.min.css)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/stylesheets/style.css,/home/cid/LPWars/target/scala-2.10/classes/public/stylesheets/style.css)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/stylesheets/main.css,/home/cid/LPWars/target/scala-2.10/classes/public/stylesheets/main.css)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/javascripts/bootstrap.min.js,/home/cid/LPWars/target/scala-2.10/classes/public/javascripts/bootstrap.min.js)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/javascripts/jquery-1.9.0.min.js,/home/cid/LPWars/target/scala-2.10/classes/public/javascripts/jquery-1.9.0.min.js)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/images/favicon.png,/home/cid/LPWars/target/scala-2.10/classes/public/images/favicon.png)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/images/red_inf.png,/home/cid/LPWars/target/scala-2.10/classes/public/images/red_inf.png)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/images/grass.jpg,/home/cid/LPWars/target/scala-2.10/classes/public/images/grass.jpg)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/images/blue_inf.png,/home/cid/LPWars/target/scala-2.10/classes/public/images/blue_inf.png)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/fonts/glyphicons-halflings-regular.woff,/home/cid/LPWars/target/scala-2.10/classes/public/fonts/glyphicons-halflings-regular.woff)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/fonts/glyphicons-halflings-regular.eot,/home/cid/LPWars/target/scala-2.10/classes/public/fonts/glyphicons-halflings-regular.eot)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/fonts/glyphicons-halflings-regular.ttf,/home/cid/LPWars/target/scala-2.10/classes/public/fonts/glyphicons-halflings-regular.ttf)[0m
+[0m[[0mdebug[0m] [0m	(/home/cid/LPWars/public/fonts/glyphicons-halflings-regular.svg,/home/cid/LPWars/target/scala-2.10/classes/public/fonts/glyphicons-halflings-regular.svg)[0m

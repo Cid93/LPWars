@@ -1,0 +1,65 @@
+#plateau {
+	background-image: url(../images/grass.jpg);
+	background-size: 100% 100%;
+	border-collapse: collapse;
+	border: 3px solid grey;
+}
+
+#plateau td {
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+}
+
+#plateau td a {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: block;
+	color: white;
+	text-align: right;
+	font-weight: bold;
+	text-decoration: none;
+	vertical-align: bottom;
+}
+
+#plateau td a span {
+	position: absolute;
+	bottom: 0;
+	right: 0;		
+}
+
+.selected {
+	border: 2px inset black;
+}
+
+td.bleu {
+	background-image: url(../images/blue_inf.png);
+	background-size: 100% 100%;
+	vertical-align: bottom;
+}
+
+td.rouge {
+	background-image: url(../images/red_inf.png);
+	background-size: 100% 100%;
+}
+
+span.bleu{
+	color: #AAAAFF;
+}
+
+span.rouge{
+	color: #FFAAAA;
+}
+
+div.bleu{
+	background-color: #AAAAFF;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+div.rouge{
+	background-color: #FFAAAA;
+	padding: 20px;
+	border-radius: 10px;
+}

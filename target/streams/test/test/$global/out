@@ -1,0 +1,29 @@
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mattaque[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mattaque[0m finished[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mtour[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mtour[0m finished[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mmouvement[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mmouvement[0m finished[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36minitialisation[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36minitialisation[0m finished[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 0.039s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mplateau[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mplateau[0m finished[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mindex[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mindex[0m finished[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36minfoBleu[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36minfoBleu[0m finished[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mmouvement[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mmouvement[0m finished[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36minfoRouge[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36minfoRouge[0m finished[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 5 total, 15.146s[0m[0m
+[0m[[0mdebug[0m] [0mFramework implementation 'org.specs2.runner.Specs2Framework' not present.[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
+[0m[[0minfo[0m] [0mPassed: Total 9, Failed 0, Errors 0, Passed 9[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	ApplicationTest[0m
+[0m[[0mdebug[0m] [0m	IntegrationTest[0m
