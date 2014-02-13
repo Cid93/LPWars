@@ -1,6 +1,6 @@
-// @SOURCE:/home/cid/LPWars/conf/routes
-// @HASH:e270d43e78600036e21984b627c52f1f7ef7c522
-// @DATE:Thu Feb 13 11:50:05 CET 2014
+// @SOURCE:/home/jonathan/LPWars/conf/routes
+// @HASH:af6f83382b0f375d841cb1624f111304128b0011
+// @DATE:Thu Feb 13 13:09:41 CET 2014
 
 package controllers;
 

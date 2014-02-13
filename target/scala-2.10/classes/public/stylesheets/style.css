@@ -33,6 +33,10 @@
 	border: 2px inset black;
 }
 
+.move {
+	background-color: rgba(0, 255, 0 ,0.5);
+}
+
 td.bleu {
 	background-image: url(../images/blue_inf.png);
 	background-size: 100% 100%;

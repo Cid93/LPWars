@@ -1,19 +1,16 @@
-2014-02-13 12:03:27,078 - [INFO] - from play in pool-4-thread-3 
+2014-02-13 12:48:45,570 - [INFO] - from play in pool-4-thread-3 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-02-13 12:03:50,643 - [INFO] - from play in play-internal-execution-context-1 
+2014-02-13 12:48:58,147 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-02-13 12:04:31,477 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-02-13 12:04:31,522 - [ERROR] - from play in play-internal-execution-context-1 
+2014-02-13 12:49:01,362 - [ERROR] - from play in play-internal-execution-context-2 
 Cannot invoke the action, eventually got an error: java.lang.NullPointerException
 
-2014-02-13 12:04:31,593 - [ERROR] - from application in play-internal-execution-context-1 
+2014-02-13 12:49:01,383 - [ERROR] - from application in play-internal-execution-context-2 
 
 
-! @6h90d780g - Internal server error, for (GET) [/jouer/mouvement?i=0&j=0&thei=0&thej=0] ->
+! @6h90j35b7 - Internal server error, for (GET) [/jouer] ->
 
 play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
@@ -41,28 +38,29 @@ play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
 Caused by: java.lang.NullPointerException: null
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:47) ~[na:na]
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:41) ~[na:na]
+	at models.Carte.getCase(Carte.java:36) ~[classes/:na]
+	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:43) ~[classes/:na]
+	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:41) ~[classes/:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:41) ~[na:na]
-	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:39) ~[na:na]
+	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:41) ~[classes/:na]
+	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:39) ~[classes/:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at views.html.plateau$.apply(plateau.template.scala:39) ~[na:na]
-	at views.html.plateau$.render(plateau.template.scala:95) ~[na:na]
-	at views.html.plateau.render(plateau.template.scala) ~[na:na]
-	at controllers.Application.sedeplacer(Application.java:35) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
+	at views.html.plateau$.apply(plateau.template.scala:39) ~[classes/:na]
+	at views.html.plateau$.render(plateau.template.scala:100) ~[classes/:na]
+	at views.html.plateau.render(plateau.template.scala) ~[classes/:na]
+	at controllers.Application.plateau(Application.java:21) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:73) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:73) ~[classes/:na]
 	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
 	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
 	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
@@ -78,16 +76,16 @@ Caused by: java.lang.NullPointerException: null
 	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
 	... 4 common frames omitted
 
-2014-02-13 12:06:06,701 - [INFO] - from play in play-internal-execution-context-1 
+2014-02-13 12:50:04,671 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2014-02-13 12:06:06,740 - [ERROR] - from play in play-internal-execution-context-1 
+2014-02-13 12:50:04,698 - [ERROR] - from play in play-internal-execution-context-3 
 Cannot invoke the action, eventually got an error: java.lang.NullPointerException
 
-2014-02-13 12:06:06,758 - [ERROR] - from application in play-internal-execution-context-1 
+2014-02-13 12:50:04,714 - [ERROR] - from application in play-internal-execution-context-3 
 
 
-! @6h90dcil9 - Internal server error, for (GET) [/jouer/mouvement?i=0&j=0&thei=0&thej=0] ->
+! @6h90j6l38 - Internal server error, for (GET) [/jouer] ->
 
 play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
@@ -115,28 +113,29 @@ play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
 Caused by: java.lang.NullPointerException: null
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:49) ~[na:na]
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:41) ~[na:na]
+	at models.Carte.getCase(Carte.java:36) ~[classes/:na]
+	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:43) ~[classes/:na]
+	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:41) ~[classes/:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:41) ~[na:na]
-	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:39) ~[na:na]
+	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:41) ~[classes/:na]
+	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:39) ~[classes/:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at views.html.plateau$.apply(plateau.template.scala:39) ~[na:na]
-	at views.html.plateau$.render(plateau.template.scala:97) ~[na:na]
-	at views.html.plateau.render(plateau.template.scala) ~[na:na]
-	at controllers.Application.sedeplacer(Application.java:35) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
+	at views.html.plateau$.apply(plateau.template.scala:39) ~[classes/:na]
+	at views.html.plateau$.render(plateau.template.scala:100) ~[classes/:na]
+	at views.html.plateau.render(plateau.template.scala) ~[classes/:na]
+	at controllers.Application.plateau(Application.java:21) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:73) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:73) ~[classes/:na]
 	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
 	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
 	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
@@ -152,13 +151,13 @@ Caused by: java.lang.NullPointerException: null
 	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
 	... 4 common frames omitted
 
-2014-02-13 12:06:52,707 - [ERROR] - from play in New I/O worker #1 
+2014-02-13 12:50:04,836 - [ERROR] - from play in play-internal-execution-context-2 
 Cannot invoke the action, eventually got an error: java.lang.NullPointerException
 
-2014-02-13 12:06:52,730 - [ERROR] - from application in New I/O worker #1 
+2014-02-13 12:50:04,838 - [ERROR] - from application in play-internal-execution-context-2 
 
 
-! @6h90df8l4 - Internal server error, for (GET) [/jouer/mouvement?i=0&j=0&thei=5&thej=5] ->
+! @6h90j6l83 - Internal server error, for (GET) [/jouer] ->
 
 play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
@@ -174,65 +173,41 @@ play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
 	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) ~[play-iteratees_2.10.jar:2.2.1]
 	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback$1(Promise.scala:144) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:147) ~[scala-library.jar:na]
-	at scala.concurrent.Future$class.recoverWith(Future.scala:416) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:58) ~[scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.handleAction$1(PlayDefaultUpstreamHandler.scala:257) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:169) ~[play_2.10.jar:2.2.1]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:62) ~[netty-http-pipelining.jar:na]
-	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) ~[netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) ~[netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:109) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:90) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) ~[netty.jar:na]
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) ~[netty.jar:na]
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) ~[netty.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146) ~[na:1.6.0_27]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) ~[na:1.6.0_27]
-	at java.lang.Thread.run(Thread.java:701) ~[na:1.6.0_27]
-java.lang.NullPointerException: null
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:49) ~[na:na]
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:41) ~[na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) ~[scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+Caused by: java.lang.NullPointerException: null
+	at models.Carte.getCase(Carte.java:36) ~[classes/:na]
+	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:43) ~[classes/:na]
+	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:41) ~[classes/:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:41) ~[na:na]
-	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:39) ~[na:na]
+	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:41) ~[classes/:na]
+	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:39) ~[classes/:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at views.html.plateau$.apply(plateau.template.scala:39) ~[na:na]
-	at views.html.plateau$.render(plateau.template.scala:97) ~[na:na]
-	at views.html.plateau.render(plateau.template.scala) ~[na:na]
-	at controllers.Application.sedeplacer(Application.java:35) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
+	at views.html.plateau$.apply(plateau.template.scala:39) ~[classes/:na]
+	at views.html.plateau$.render(plateau.template.scala:100) ~[classes/:na]
+	at views.html.plateau.render(plateau.template.scala) ~[classes/:na]
+	at controllers.Application.plateau(Application.java:21) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:73) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:73) ~[classes/:na]
 	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
 	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
 	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
@@ -246,299 +221,77 @@ java.lang.NullPointerException: null
 	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
 	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
 	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+	... 4 common frames omitted
 
-2014-02-13 12:06:58,993 - [ERROR] - from play in New I/O worker #1 
-Cannot invoke the action, eventually got an error: java.lang.NullPointerException
-
-2014-02-13 12:06:59,007 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6h90dfi2k - Internal server error, for (GET) [/jouer/mouvement?i=0&j=0&thei=0&thej=0] ->
-
-play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
-	at play.api.DefaultApplication.handleError(Application.scala:399) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) ~[play_2.10.jar:2.2.1]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) ~[play-iteratees_2.10.jar:2.2.1]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback$1(Promise.scala:144) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:147) ~[scala-library.jar:na]
-	at scala.concurrent.Future$class.recoverWith(Future.scala:416) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:58) ~[scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.handleAction$1(PlayDefaultUpstreamHandler.scala:257) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:169) ~[play_2.10.jar:2.2.1]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:62) ~[netty-http-pipelining.jar:na]
-	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) ~[netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) ~[netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:109) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:90) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) ~[netty.jar:na]
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) ~[netty.jar:na]
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) ~[netty.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146) ~[na:1.6.0_27]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) ~[na:1.6.0_27]
-	at java.lang.Thread.run(Thread.java:701) ~[na:1.6.0_27]
-java.lang.NullPointerException: null
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:49) ~[na:na]
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:41) ~[na:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
-	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:41) ~[na:na]
-	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:39) ~[na:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
-	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at views.html.plateau$.apply(plateau.template.scala:39) ~[na:na]
-	at views.html.plateau$.render(plateau.template.scala:97) ~[na:na]
-	at views.html.plateau.render(plateau.template.scala) ~[na:na]
-	at controllers.Application.sedeplacer(Application.java:35) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
-
-2014-02-13 12:07:06,221 - [ERROR] - from play in New I/O worker #1 
-Cannot invoke the action, eventually got an error: java.lang.NullPointerException
-
-2014-02-13 12:07:06,239 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6h90dg2kl - Internal server error, for (GET) [/jouer/mouvement?i=0&j=0&thei=2&thej=2] ->
-
-play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
-	at play.api.DefaultApplication.handleError(Application.scala:399) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) ~[play_2.10.jar:2.2.1]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) ~[play-iteratees_2.10.jar:2.2.1]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback$1(Promise.scala:144) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:147) ~[scala-library.jar:na]
-	at scala.concurrent.Future$class.recoverWith(Future.scala:416) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:58) ~[scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.handleAction$1(PlayDefaultUpstreamHandler.scala:257) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:169) ~[play_2.10.jar:2.2.1]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:62) ~[netty-http-pipelining.jar:na]
-	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) ~[netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) ~[netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:109) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:90) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) ~[netty.jar:na]
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) ~[netty.jar:na]
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) ~[netty.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146) ~[na:1.6.0_27]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) ~[na:1.6.0_27]
-	at java.lang.Thread.run(Thread.java:701) ~[na:1.6.0_27]
-java.lang.NullPointerException: null
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:49) ~[na:na]
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:41) ~[na:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
-	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:41) ~[na:na]
-	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:39) ~[na:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
-	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
-	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
-	at views.html.plateau$.apply(plateau.template.scala:39) ~[na:na]
-	at views.html.plateau$.render(plateau.template.scala:97) ~[na:na]
-	at views.html.plateau.render(plateau.template.scala) ~[na:na]
-	at controllers.Application.sedeplacer(Application.java:35) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
-
-2014-02-13 12:07:15,689 - [ERROR] - from play in New I/O worker #1 
-Cannot invoke the action, eventually got an error: java.lang.NullPointerException
-
-2014-02-13 12:07:15,697 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6h90dggko - Internal server error, for (GET) [/jouer/mouvement?i=1&j=1&thei=1&thej=1] ->
-
-play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
-	at play.api.DefaultApplication.handleError(Application.scala:399) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) ~[play_2.10.jar:2.2.1]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) ~[play-iteratees_2.10.jar:2.2.1]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback$1(Promise.scala:144) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:147) ~[scala-library.jar:na]
-	at scala.concurrent.Future$class.recoverWith(Future.scala:416) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:58) ~[scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.handleAction$1(PlayDefaultUpstreamHandler.scala:257) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:169) ~[play_2.10.jar:2.2.1]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:62) ~[netty-http-pipelining.jar:na]
-	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) ~[netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) ~[netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:109) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:90) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) ~[netty.jar:na]
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) ~[netty.jar:na]
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) ~[netty.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146) ~[na:1.6.0_27]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) ~[na:1.6.0_27]
-	at java.lang.Thread.run(Thread.java:701) ~[na:1.6.0_27]
-java.lang.NullPointerException: null
-	at controllers.Application.sedeplacer(Application.java:34) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
-	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
-	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
-
-2014-02-13 12:09:58,748 - [INFO] - from play in play-internal-execution-context-1 
+2014-02-13 12:50:43,459 - [INFO] - from play in play-internal-execution-context-3 
 Application started (Dev)
 
-2014-02-13 12:10:16,623 - [ERROR] - from play in New I/O worker #1 
+2014-02-13 12:50:54,344 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2014-02-13 12:52:07,530 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2014-02-13 12:56:03,828 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2014-02-13 12:59:23,736 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-02-13 13:00:21,097 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-02-13 13:01:36,477 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-02-13 13:02:48,537 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-02-13 13:03:01,218 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-02-13 13:03:55,553 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6h90l2245 - Internal server error, for (GET) [/jouer/informations?i=0&j=0] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value cellule]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.1]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+
+2014-02-13 13:04:22,843 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-02-13 13:05:23,144 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-02-13 13:06:35,392 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-02-13 13:06:55,218 - [ERROR] - from play in play-internal-execution-context-10 
 Cannot invoke the action, eventually got an error: java.lang.NullPointerException
 
-2014-02-13 12:10:16,644 - [ERROR] - from application in New I/O worker #1 
+2014-02-13 13:06:55,226 - [ERROR] - from application in play-internal-execution-context-10 
 
 
-! @6h90e0oc3 - Internal server error, for (GET) [/jouer/mouvement?i=9&j=9&thei=4&thej=5] ->
+! @6h90lc7p3 - Internal server error, for (GET) [/jouer/informations?i=7&j=9] ->
 
 play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
@@ -554,44 +307,19 @@ play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
 	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) ~[play-iteratees_2.10.jar:2.2.1]
 	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback$1(Promise.scala:144) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:147) ~[scala-library.jar:na]
-	at scala.concurrent.Future$class.recoverWith(Future.scala:416) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:58) ~[scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.handleAction$1(PlayDefaultUpstreamHandler.scala:257) ~[play_2.10.jar:2.2.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:169) ~[play_2.10.jar:2.2.1]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:62) ~[netty-http-pipelining.jar:na]
-	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) ~[netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) ~[netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) ~[netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) ~[netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:109) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:90) ~[netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) ~[netty.jar:na]
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) ~[netty.jar:na]
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) ~[netty.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146) ~[na:1.6.0_27]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) ~[na:1.6.0_27]
-	at java.lang.Thread.run(Thread.java:701) ~[na:1.6.0_27]
-java.lang.NullPointerException: null
-	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:49) ~[na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) ~[scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+Caused by: java.lang.NullPointerException: null
+	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:45) ~[na:na]
 	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:41) ~[na:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
@@ -608,11 +336,11 @@ java.lang.NullPointerException: null
 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
 	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
 	at views.html.plateau$.apply(plateau.template.scala:39) ~[na:na]
-	at views.html.plateau$.render(plateau.template.scala:97) ~[na:na]
+	at views.html.plateau$.render(plateau.template.scala:100) ~[na:na]
 	at views.html.plateau.render(plateau.template.scala) ~[na:na]
-	at controllers.Application.sedeplacer(Application.java:35) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:89) ~[na:na]
+	at controllers.Application.info(Application.java:28) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(routes_routing.scala:81) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(routes_routing.scala:81) ~[na:na]
 	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
 	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
 	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
@@ -626,14 +354,82 @@ java.lang.NullPointerException: null
 	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
 	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
 	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+
+2014-02-13 13:07:11,009 - [ERROR] - from play in play-internal-execution-context-10 
+Cannot invoke the action, eventually got an error: java.lang.NullPointerException
+
+2014-02-13 13:07:11,013 - [ERROR] - from application in play-internal-execution-context-10 
+
+
+! @6h90ld588 - Internal server error, for (GET) [/jouer/informations?i=7&j=9] ->
+
+play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) ~[play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) ~[play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) ~[play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) ~[play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) ~[scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+Caused by: java.lang.NullPointerException: null
+	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:45) ~[na:na]
+	at views.html.plateau$$anonfun$apply$1$$anonfun$apply$2.apply(plateau.template.scala:41) ~[na:na]
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
+	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:41) ~[na:na]
+	at views.html.plateau$$anonfun$apply$1.apply(plateau.template.scala:39) ~[na:na]
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[scala-library.jar:na]
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33) ~[scala-library.jar:na]
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108) ~[scala-library.jar:na]
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[scala-library.jar:na]
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:108) ~[scala-library.jar:na]
+	at views.html.plateau$.apply(plateau.template.scala:39) ~[na:na]
+	at views.html.plateau$.render(plateau.template.scala:100) ~[na:na]
+	at views.html.plateau.render(plateau.template.scala) ~[na:na]
+	at controllers.Application.info(Application.java:28) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(routes_routing.scala:81) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(routes_routing.scala:81) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
 
-2014-02-13 12:13:07,685 - [INFO] - from play in play-internal-execution-context-1 
+2014-02-13 13:07:40,374 - [INFO] - from play in play-internal-execution-context-10 
 Application started (Dev)
 
-2014-02-13 12:14:09,040 - [INFO] - from play in play-internal-execution-context-1 
+2014-02-13 13:09:56,273 - [INFO] - from play in play-internal-execution-context-11 
 Application started (Dev)
 

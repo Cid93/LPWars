@@ -12,6 +12,7 @@
                @if(cellule.estVide()){
                   @if( i != null 
                         && j != null 
+                        && carte.getCase(i, j).getGc().getPm() != 0 
                         && carte.getEquipeActuelle() ==
                            carte.getCase(i, j).getGc().getEquipe()
                         && (
@@ -22,7 +23,7 @@
                               + carte.getCase(i, j).getGc().getj()
                            )) <= carte.getCase(i, j).getGc.getPm())) {
                      <td>
-                        <a href="@routes.Application.sedeplacer(i, j, cellule.geti(), cellule.getj())"></a>
+                        <a class="move" href="@routes.Application.sedeplacer(i, j, cellule.geti(), cellule.getj())"></a>
                      </td>
                   } else {
                      <td></td>
@@ -54,8 +55,8 @@
          @if(carte.getEquipeActuelle() ==
                carte.getCase(i, j).getGc().getEquipe()){
                <div id="action">
-                  <a class="btn btn-default" href="">
-                     Se d&eacute;placer</a>
+                  <a class="btn btn-default" href="@routes.Application.fin()">
+                     Fin de tour</a>
                   <a class="btn btn-default" href="">
                      Attaquer
                   </a>
