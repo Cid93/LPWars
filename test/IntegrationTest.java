@@ -40,6 +40,8 @@ public class IntegrationTest {
                 assertThat(browser.pageSource()).contains("<td class=\"bleu\">");
                 assertThat(browser.pageSource()).contains("<td class=\"rouge\">");
                 assertThat(browser.pageSource()).contains("<a href=\"/jouer/informations?i=0&amp;j=0\">");
+                assertThat(browser.pageSource()).contains("<span class=\"bleu\">");
+                assertThat(browser.pageSource()).contains("Jour 0");
             }
         });
     }
@@ -58,6 +60,8 @@ public class IntegrationTest {
                 assertThat(browser.pageSource()).contains("<td class=\"bleu\">");
                 assertThat(browser.pageSource()).contains("<div id=\"info\" class=\"bleu col-lg-offset-1 col-lg-6\">");
                 assertThat(browser.pageSource()).contains("<div id=\"action\">");
+                assertThat(browser.pageSource()).contains("<span class=\"bleu\">");
+                assertThat(browser.pageSource()).contains("Jour 0");
             }
         });
     }
@@ -75,6 +79,8 @@ public class IntegrationTest {
                 assertThat(browser.pageSource()).contains("<table id=\"plateau\" class=\"col-lg-5\">");
                 assertThat(browser.pageSource()).contains("<td class=\"rouge\">");
                 assertThat(browser.pageSource()).contains("<div id=\"info\" class=\"rouge col-lg-offset-1 col-lg-6\">");
+                assertThat(browser.pageSource()).contains("<span class=\"bleu\">");
+                assertThat(browser.pageSource()).contains("Jour 0");
             }
         });
     }
@@ -93,6 +99,25 @@ public class IntegrationTest {
                 assertThat(browser.pageSource()).contains("<td class=\"bleu\">");
                 assertThat(browser.pageSource()).contains("<div id=\"info\" class=\"bleu col-lg-offset-1 col-lg-6\">");
                 assertThat(browser.pageSource()).contains("<div id=\"action\">");
+                assertThat(browser.pageSource()).contains("<span class=\"bleu\">");
+                assertThat(browser.pageSource()).contains("Jour 0");
+            }
+        });
+    }
+
+    /**
+     * Test sur la fin d'un tour
+     * page fin de tour
+     */
+    @Test
+    public void findetour() {
+        running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
+            public void invoke(TestBrowser browser) {
+                browser.goTo("http://localhost:3333/jouer/findutour");
+                assertThat(browser.pageSource()).contains("LPWars");
+                assertThat(browser.pageSource()).contains("<table id=\"plateau\" class=\"col-lg-5\">");
+                assertThat(browser.pageSource()).contains("<span class=\"rouge\">");
+                assertThat(browser.pageSource()).contains("Jour 1");
             }
         });
     }

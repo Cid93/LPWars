@@ -1,0 +1,22 @@
+[0m[[0minfo[0m] [0mApplicationTest[0m
+[0m[[0minfo[0m] [0m[32m+[0m attaque[0m
+[0m[[0minfo[0m] [0m[32m+[0m tour[0m
+[0m[[0minfo[0m] [0m[32m+[0m mouvement[0m
+[0m[[0minfo[0m] [0m[32m+[0m initialisation[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mTotal for test ApplicationTest[0m
+[0m[[0minfo[0m] [0m[34mFinished in 0.026 seconds[0m[0m
+[0m[[0minfo[0m] [0m[34m4 tests, 0 failures, 0 errors[0m[0m
+[0m[[0minfo[0m] [0mIntegrationTest[0m
+[0m[[0minfo[0m] [0m[32m+[0m plateau[0m
+[0m[[0minfo[0m] [0m[32m+[0m index[0m
+[0m[[0minfo[0m] [0m[32m+[0m infoBleu[0m
+[0m[[0minfo[0m] [0m[32m+[0m findetour[0m
+[0m[[0minfo[0m] [0m[32m+[0m mouvement[0m
+[0m[[0minfo[0m] [0m[32m+[0m infoRouge[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0mTotal for test IntegrationTest[0m
+[0m[[0minfo[0m] [0m[34mFinished in 0.007 seconds[0m[0m
+[0m[[0minfo[0m] [0m[34m6 tests, 0 failures, 0 errors[0m[0m
